@@ -1,0 +1,256 @@
+# 這份檔案包含了 12 星座的 Series Theme 與 Glossary 設定
+# 未來翻譯時，請複製對應星座的區塊，覆蓋 trans.py 中的對應部分
+
+# ==========================================
+# 1. 白羊座 (Aries)
+# ==========================================
+SERIES_THEME = "白羊座 (Aries) 的開創精神與自我主張"
+
+    # --- 本系列專用 (SERIES) - 白羊座 ---
+    "Aries": "白羊座",
+    "Mars": "火星", # 白羊座守護星
+    "Mars people": "火星子民"
+    "Cardinal Fire": "開創火象",
+    "The Ram": "公羊/白羊", 
+    "Aries Man": "白羊男",
+    "Aries Woman": "白羊女",
+    "Aries Boss": "白羊老闆",
+    "Aries Employee": "白羊員工",
+    "Aries Baby": "白羊孩童",
+    "Initiative": "主動性/開創性",
+    "Courage": "勇氣",
+    "Impulsive": "衝動/直率",
+    "Warrior": "戰士",
+
+# ==========================================
+# 2. 金牛座 (Taurus)
+# ==========================================
+SERIES_THEME = "金牛座 (Taurus) 的價值累積與感官享受"
+
+    # --- 本系列專用 (SERIES) - 金牛座 ---
+    "Taurus": "金牛座",
+    "Venus": "金星", # 金牛座守護星
+    "Fixed Earth": "固定土象",
+    "The Bull": "公牛",
+    "Taurus Man": "金牛男",
+    "Taurus Woman": "金牛女",
+    "Taurus Boss": "金牛老闆",
+    "Taurus Employee": "金牛員工",
+    "Taurus Baby": "金牛孩童",
+    "Possessive": "佔有慾",
+    "Stubborn": "固執/堅持",
+    "Sensual": "感官的/肉慾的",
+    "Patience": "耐心",
+    "Determination": "決心",
+
+# ==========================================
+# 3. 雙子座 (Gemini)
+# ==========================================
+SERIES_THEME = "雙子座 (Gemini) 的心智交流與多變樣貌"
+
+    # --- 本系列專用 (SERIES) - 雙子座 ---
+    "Gemini": "雙子座",
+    "Mercury": "水星", # 雙子座守護星
+    "Mutable Air": "變動風象",
+    "The Twins": "雙胞胎/雙子",
+    "Gemini Man": "雙子男",
+    "Gemini Woman": "雙子女",
+    "Gemini Boss": "雙子老闆",
+    "Gemini Employee": "雙子員工",
+    "Gemini Baby": "雙子孩童",
+    "Duality": "二元性/雙重性",
+    "Versatile": "多才多藝/善變",
+    "Communication": "溝通/交流",
+    "Curiosity": "好奇心",
+
+# ==========================================
+# 4. 巨蟹座 (Cancer)
+# ==========================================
+SERIES_THEME = "巨蟹座 (Cancer) 的人格原型與生活應用"
+
+    # --- 本系列專用 (SERIES) - 巨蟹座 ---
+    "Cancer": "巨蟹座",
+    "Moon": "月亮/月球",  # 視語境，若指守護星用月亮
+    "Cardinal Water": "開創水象",
+    "Crab": "蟹/巨蟹",
+    "Cancer Man": "巨蟹男",
+    "Cancer Woman": "巨蟹女",
+    "Cancer Boss": "巨蟹老闆",
+    "Cancer Employee": "巨蟹員工",
+    "Cancer Baby": "巨蟹孩童",
+    "Lunacy": "受月亮影響的情緒/瘋狂",
+    "Nurturing": "滋養/照顧",
+    "Protective": "保護性",
+
+# ==========================================
+# 5. 獅子座 (Leo)
+# ==========================================
+SERIES_THEME = "獅子座 (Leo) 的王者風範與自我實現"
+
+    # --- 本系列專用 (SERIES) - 獅子座 ---
+    "Leo": "獅子座",
+    "Sun": "太陽",  # 獅子座守護星
+    "Fixed Fire": "固定火象",
+    "The Lion": "獅子", 
+    "Leo Man": "獅子男",
+    "Leo Woman": "獅子女",
+    "Leo Boss": "獅子老闆",
+    "Leo Employee": "獅子員工",
+    "Leo Baby": "獅子孩童",
+    "Pride": "自尊/尊嚴", 
+    "Ego": "自我/小我",   
+    "Royalty": "皇室/王者風範",
+    "Dramatic": "戲劇化/張力十足",
+    "Generosity": "慷慨/大方",
+    "Solar": "太陽的/陽性的",
+
+# ==========================================
+# 6. 處女座 (Virgo)
+# ==========================================
+SERIES_THEME = "處女座 (Virgo) 的完美追求與服務精神"
+
+    # --- 本系列專用 (SERIES) - 處女座 ---
+    "Virgo": "處女座",
+    "Mercury": "水星", # 處女座守護星
+    "Mutable Earth": "變動土象",
+    "The Virgin": "處女/室女", # 象徵圖騰
+    "Virgo Man": "處女男",
+    "Virgo Woman": "處女女",
+    "Virgo Boss": "處女老闆",
+    "Virgo Employee": "處女員工",
+    "Virgo Baby": "處女孩童",
+    "Perfectionist": "完美主義者",
+    "Analysis": "分析",
+    "Critical": "挑剔/批判性",
+    "Service": "服務",
+    "Discrimination": "辨識力/鑑賞力",
+
+# ==========================================
+# 7. 天秤座 (Libra)
+# ==========================================
+SERIES_THEME = "天秤座 (Libra) 的和諧之道與夥伴關係"
+
+    # --- 本系列專用 (SERIES) - 天秤座 ---
+    "Libra": "天秤座",
+    "Venus": "金星", # 天秤座守護星
+    "Cardinal Air": "開創風象",
+    "The Scales": "天秤", # 象徵圖騰
+    "Libra Man": "天秤男",
+    "Libra Woman": "天秤女",
+    "Libra Boss": "天秤老闆",
+    "Libra Employee": "天秤員工",
+    "Libra Baby": "天秤孩童",
+    "Harmony": "和諧",
+    "Balance": "平衡",
+    "Diplomacy": "外交手腕",
+    "Indecisive": "優柔寡斷",
+    "Partnership": "夥伴關係",
+
+# ==========================================
+# 8. 天蠍座 (Scorpio)
+# ==========================================
+SERIES_THEME = "天蠍座 (Scorpio) 的深層轉化與強烈情感"
+
+    # --- 本系列專用 (SERIES) - 天蠍座 ---
+    "Scorpio": "天蠍座",
+    "Pluto": "冥王星", # 現代守護星
+    "Mars": "火星",   # 古典守護星
+    "Fixed Water": "固定水象",
+    "The Scorpion": "蠍子",
+    "Eagle": "老鷹", # 天蠍座的高階象徵
+    "Phoenix": "鳳凰", # 天蠍座的轉化象徵
+    "Scorpio Man": "天蠍男",
+    "Scorpio Woman": "天蠍女",
+    "Scorpio Boss": "天蠍老闆",
+    "Scorpio Employee": "天蠍員工",
+    "Scorpio Baby": "天蠍孩童",
+    "Intensity": "強烈/極致",
+    "Transformation": "轉化/蛻變",
+    "Secretive": "神秘/守密",
+    "Passion": "激情",
+
+# ==========================================
+# 9. 射手座 (Sagittarius)
+# ==========================================
+SERIES_THEME = "射手座 (Sagittarius) 的真理追尋與自由靈魂"
+
+    # --- 本系列專用 (SERIES) - 射手座 ---
+    "Sagittarius": "射手座",
+    "Jupiter": "木星", # 射手座守護星
+    "Mutable Fire": "變動火象",
+    "The Archer": "射手/人馬",
+    "Sagittarius Man": "射手男",
+    "Sagittarius Woman": "射手女",
+    "Sagittarius Boss": "射手老闆",
+    "Sagittarius Employee": "射手員工",
+    "Sagittarius Baby": "射手孩童",
+    "Centaur": "半人馬",
+    "Optimism": "樂觀",
+    "Freedom": "自由",
+    "Philosophy": "哲學",
+    "Blunt": "直率/心直口快",
+
+# ==========================================
+# 10. 磨羯座 (Capricorn)
+# ==========================================
+SERIES_THEME = "磨羯座 (Capricorn) 的社會成就與結構建構"
+
+    # --- 本系列專用 (SERIES) - 磨羯座 ---
+    "Capricorn": "磨羯座",
+    "Saturn": "土星", # 磨羯座守護星
+    "Cardinal Earth": "開創土象",
+    "The Goat": "山羊/磨羯",
+    "Sea-Goat": "海山羊", # 磨羯座的原始圖騰
+    "Capricorn Man": "磨羯男",
+    "Capricorn Woman": "磨羯女",
+    "Capricorn Boss": "磨羯老闆",
+    "Capricorn Employee": "磨羯員工",
+    "Capricorn Baby": "磨羯孩童",
+    "Ambition": "野心/抱負",
+    "Responsibility": "責任感",
+    "Authority": "權威",
+    "Discipline": "紀律",
+
+# ==========================================
+# 11. 水瓶座 (Aquarius)
+# ==========================================
+SERIES_THEME = "水瓶座 (Aquarius) 的人道精神與革新思維"
+
+    # --- 本系列專用 (SERIES) - 水瓶座 ---
+    "Aquarius": "水瓶座",
+    "Uranus": "天王星", # 現代守護星
+    "Saturn": "土星",   # 古典守護星
+    "Fixed Air": "固定風象",
+    "The Water Bearer": "持水者/水瓶",
+    "Aquarius Man": "水瓶男",
+    "Aquarius Woman": "水瓶女",
+    "Aquarius Boss": "水瓶老闆",
+    "Aquarius Employee": "水瓶員工",
+    "Aquarius Baby": "水瓶孩童",
+    "Innovation": "創新",
+    "Humanitarian": "人道主義",
+    "Detached": "抽離/疏離",
+    "Eccentric": "古怪/特立獨行",
+    "Friendship": "友誼",
+
+# ==========================================
+# 12. 雙魚座 (Pisces)
+# ==========================================
+SERIES_THEME = "雙魚座 (Pisces) 的靈性慈悲與夢幻邊界"
+
+    # --- 本系列專用 (SERIES) - 雙魚座 ---
+    "Pisces": "雙魚座",
+    "Neptune": "海王星", # 現代守護星
+    "Jupiter": "木星",   # 古典守護星
+    "Mutable Water": "變動水象",
+    "The Fish": "雙魚",
+    "Pisces Man": "雙魚男",
+    "Pisces Woman": "雙魚女",
+    "Pisces Boss": "雙魚老闆",
+    "Pisces Employee": "雙魚員工",
+    "Pisces Baby": "雙魚孩童",
+    "Compassion": "慈悲/同情心",
+    "Intuition": "直覺",
+    "Dreamy": "夢幻",
+    "Escapism": "逃避現實",
+    "Sensitivity": "敏感",
