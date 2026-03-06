@@ -2,3 +2,11 @@
 __pycache__/
 .DS_Store
 *.pyc
+need_trans_txt/
+regular_trans/
+trans_ok_md/
+regular_trans_ok/
+need_trans_txt/
+regular_trans/
+trans_ok_md/
+regular_trans_ok/
