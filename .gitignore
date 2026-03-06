@@ -2,11 +2,14 @@
 __pycache__/
 .DS_Store
 *.pyc
-need_trans_txt/
-regular_trans/
-trans_ok_md/
-regular_trans_ok/
-need_trans_txt/
-regular_trans/
-trans_ok_md/
-regular_trans_ok/
+# 排除資料夾底下的所有檔案
+need_trans_txt/*
+regular_trans/*
+trans_ok_md/*
+regular_trans_ok/*
+
+# 但不要排除 .gitkeep，這樣資料夾的空殼就會被保留
+!need_trans_txt/.gitkeep
+!regular_trans/.gitkeep
+!trans_ok_md/.gitkeep
+!regular_trans_ok/.gitkeep
