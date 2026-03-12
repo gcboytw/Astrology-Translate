@@ -39,11 +39,15 @@ def split_text_into_chunks(text, max_size=3000):
         
     return chunks
 
-def generate_draft(chunk_text, index, total, stats):
+def generate_draft(chunk_text, index, total, stats, is_md=False):
     """
     第一步：生成初稿 (Draft)
     """
-    prompt = f"Please translate the following Astrology text into Traditional Chinese (Part {index}/{total}). Ensure NO simplified Chinese characters are used. Translate fully and accurately:\n\n{chunk_text}"
+    rules = ""
+    if is_md:
+        rules = "\n\nImportant rules:\n- Preserve Markdown formatting.\n- Do NOT translate code blocks.\n- Do NOT translate URLs.\n- Do NOT add explanations.\n- Only output the translated text.\n"
+
+    prompt = f"Please translate the following Astrology text into Traditional Chinese (Part {index}/{total}). Ensure NO simplified Chinese characters are used. Translate fully and accurately{rules}:\n\n{chunk_text}"
 
     try:
         response = ollama.generate(
@@ -109,6 +113,8 @@ If the draft is perfect, output the original draft exactly as is.
         return draft_translation # 如果核對失敗，至少回傳初稿
 
 def translate_file(file_path, output_path, stats):
+    is_md = file_path.lower().endswith('.md')
+
     # 嘗試多種編碼讀取
     encodings = ['utf-8', 'utf-8-sig', 'utf-16', 'big5', 'gbk']
     content = None
@@ -137,7 +143,7 @@ def translate_file(file_path, output_path, stats):
 
     for i, chunk in enumerate(chunks, 1):
         print(f"    [Step 1/2] 翻譯初稿中... ({i}/{len(chunks)})")
-        draft = generate_draft(chunk, i, len(chunks), stats)
+        draft = generate_draft(chunk, i, len(chunks), stats, is_md=is_md)
         
         if draft:
             print(f"    [Step 2/2] 自我核對與修正中... ({i}/{len(chunks)})")
@@ -175,15 +181,18 @@ def main():
         print(f"已建立目標資料夾: {TARGET_FOLDER}")
 
     # 讀取待翻譯檔案清單
-    files = [f for f in os.listdir(SOURCE_FOLDER) if f.endswith('.txt')]
+    files = [f for f in os.listdir(SOURCE_FOLDER) if f.endswith('.txt') or f.endswith('.md')]
     files.sort() # 確保按章節順序處理
 
     print(f"找到 {len(files)} 個檔案，準備開始翻譯...")
 
     for file_name in tqdm(files, desc="翻譯進度"):
         source_path = os.path.join(SOURCE_FOLDER, file_name)
-        #target_path = os.path.join(TARGET_FOLDER, file_name)
-        target_path = os.path.join(TARGET_FOLDER, file_name.replace('.txt', '.md'))
+        if file_name.endswith('.txt'):
+            target_file_name = file_name.replace('.txt', '.md')
+        else:
+            target_file_name = file_name
+        target_path = os.path.join(TARGET_FOLDER, target_file_name)
 
         # 斷點續傳邏輯
         if os.path.exists(target_path):

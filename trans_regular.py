@@ -51,11 +51,15 @@ def split_text_into_chunks(text, max_size=3000):
         
     return chunks
 
-def translate_chunk(chunk_text, index, total):
+def translate_chunk(chunk_text, index, total, is_md=False):
     """
     翻譯單一文本塊
     """
-    prompt = f"Please translate the following text into Traditional Chinese (Part {index}/{total}). Ensure NO simplified Chinese characters are used. Translate fully and accurately, preserving all original markdown formatting:\n\n{chunk_text}"
+    rules = ""
+    if is_md:
+        rules = "\n\nImportant rules:\n- Preserve Markdown formatting.\n- Do NOT translate code blocks.\n- Do NOT translate URLs.\n- Do NOT add explanations.\n- Only output the translated text.\n"
+
+    prompt = f"Please translate the following text into Traditional Chinese (Part {index}/{total}). Ensure NO simplified Chinese characters are used. Translate fully and accurately, preserving all original markdown formatting:{rules}\n\n{chunk_text}"
 
     try:
         response = ollama.generate(
@@ -76,6 +80,8 @@ def translate_chunk(chunk_text, index, total):
         return None
 
 def translate_file(file_path, output_path):
+    is_md = file_path.lower().endswith('.md')
+
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
@@ -95,7 +101,7 @@ def translate_file(file_path, output_path):
     for i, chunk in enumerate(chunks, 1):
         if len(chunks) > 1:
             print(f"    轉換中... ({i}/{len(chunks)})")
-        translated_part = translate_chunk(chunk, i, len(chunks))
+        translated_part = translate_chunk(chunk, i, len(chunks), is_md=is_md)
         
         if translated_part:
             translated_parts.append(translated_part)
